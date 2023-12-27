@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./trangchu.css" />
+    <link rel="stylesheet" type="text/css" href="./chitietphong.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="./img/logo app.png"
+              alt="Your Logo"
+              width="100"
+              height="50"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Cho thuê nhà trọ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Cho thuê nhà nguyên căn</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Cho thuê căn hộ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Tìm người ở ghép</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="trangchu.html"
+                  ><i class="fas fa-home"></i> Trang Chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  id="yeuthich"
+                  class="nav-link active"
+                  aria-current="page"
+                  href="yeuthich.html"
+                  ><span>&#10084;</span> Yêu Thích</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  id="dangnhap"
+                  class="nav-link active"
+                  aria-current="page"
+                  href="dangnhap.html"
+                  ><span>&#128274;</span> Đăng Nhập</a
+                >
+              </li>
+              <li class="nav-item">
+                <button
+                  id="dangtin"
+                  class="nav-link btn btn-primary"
+                  onclick="redirectToDangTinPage()"
+                >
+                  <span>&#128269;</span> Đăng Tin
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="modalBookRoom" id="modalBookRoom">
+      <div class="modalBookRoom_child">
+        <form action="POST">
+          <label for="fullname_bookroom">Họ tên</label>
+          <input
+            type="text"
+            name="fullname_bookroom"
+            id="fullname_bookroom"
+            class="modalBookRoom_child_input"
+            placeholder="Nhập fullname"
+          />
+          <label for="phone_bookroom" style="margin-top: 20px"
+            >Số điện thoại</label
+          >
+          <input
+            type="text"
+            name="phone_bookroom"
+            id="phone_bookroom"
+            class="modalBookRoom_child_input"
+            placeholder="Nhập phone"
+          />
+          <label for="email_bookroom" style="margin-top: 20px">Email</label>
+          <input
+            type="text"
+            name="email_bookroom"
+            id="email_bookroom"
+            class="modalBookRoom_child_input"
+            placeholder="Nhập email"
+          />
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <button
+              class="btn_submit_bookroom"
+              id="btn_submit_bookroom"
+              type="button"
+            >
+              Gửi
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="room-detail" class="room-detail">
+      <!-- Nội dung trang chi tiết sẽ được hiển thị ở đây bằng JavaScript -->
+      <!-- <h1 class="title">Cho thuê nhà(32m2) mặt ngõ Lương Thế Vinh</h1>
+      <p class="address">Địa chỉ: Đường Lương Thế Vinh, Thanh Xuân, Hà Nội</p>
+      <div class="info_price">
+        <p class="">
+          <span class="price">4.5 triệu/tháng</span>
+          <span class="acreage">32m2</span>
+        </p>
+        <p class="save_story">Lưu tin này</p>
+      </div>
+
+      <div class="container_product">
+        <div class="image_detail">
+          <img
+            src="/demo/img/bg login.jpg"
+            alt=""
+            style="width: 100%; aspect-ratio: 16/9"
+          />
+        </div>
+        <div class="profile">
+          <div class="profile_model">
+            <div class="profile_avt">
+              <img
+                src="/demo/img/bg login.jpg"
+                alt=""
+                style="
+                  width: 25%;
+                  aspect-ratio: 1/1;
+                  border-radius: 100rem;
+                  object-fit: cover;
+                "
+              />
+              <div style="display: flex; flex-direction: column">
+                <span>Quang</span>
+                <a href="#">Xem trang cá nhân</a>
+                <p>Hoạt động gần đây</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary">012234456</button>
+            <button type="button" class="btn btn-secondary">Nhắn zalo</button>
+          </div>
+          <div class="profile_button">
+            <button class="btn btn-primary editRoomButton" style="width: 48%">
+              Sửa
+            </button>
+            <button class="btn btn-danger deleteRoomButton" style="width: 48%">
+              Xóa
+            </button>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="description_product" style="margin-top: 20px">
+        <h3 style="text-decoration: underline; padding-bottom: 10px">
+          Tóm tắt tin đăng
+        </h3>
+        <p
+          style="padding: 10px; background-color: #f5f5f5; border-radius: 10px"
+        >
+          <span
+            style="
+              padding: 10px;
+              background-color: #f5f5f5;
+              border-radius: 10px;
+            "
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+            esse impedit qui voluptatem necessitatibus, et eum quae doloremque
+            provident officiis!</span
+          >
+        </p>
+        <h3 style="text-decoration: underline; padding-top: 20px">
+          Thông tin mô tả
+        </h3>
+        <p
+          style="padding: 10px; background-color: #f5f5f5; border-radius: 10px"
+        >
+          <span
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias,
+            repellat rem dolorem aperiam tempora tempore dicta eum iste optio
+            culpa itaque! Ducimus laboriosam ipsam iste quisquam quod hic alias
+            animi.</span
+          >
+        </p>
+        <h3 style="text-decoration: underline; padding-top: 20px">
+          Vị trí trên bản đồ
+        </h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35436.81397300299!2d105.82522097737045!3d20.999188593668975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9b3f23b42b%3A0x49fa01aaa06d239b!2sVinhomes%20Royal%20City!5e0!3m2!1svi!2s!4v1699431732554!5m2!1svi!2s"
+          width="600"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div> -->
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Về chúng tôi</h3>
+            <p>Website cho thuê phòng trọ, nhà trọ nhanh chóng và hiệu quả</p>
+            <p>ĐIỆN BIÊN PHỦ, QUẬN THANH KHÊ, TP.ĐÀ NẴNG</p>
+            <p>0967833378</p>
+            <p>vnhome@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Hỗ trợ</h3>
+            <ul>
+              <li><a href="gioithieu.html">Gioi Thiệu</a></li>
+              <li><a href="huongdandangtin.html">Hướng dẫn đăng tin</a></li>
+              <li><a href="quydinhdangtin.html">Quy định đăng tin</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Liên Hệ</h3>
+            <ul>
+              <li><a href="#">Phương thức liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="chitietphong.js"></script>
+    <script>
+      function submitData() {
+        var userInput = document.getElementById("userInput").value;
+        console.log("Dữ liệu nhập vào: ", userInput);
+        // Thực hiện các xử lý khác tùy thuộc vào nhu cầu của bạn
+      }
+    </script>
+  </body>
+</html>

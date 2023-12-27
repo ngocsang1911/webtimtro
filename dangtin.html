@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng tin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./trangchu.css" />
+  </head>
+  <body>
+    <body>
+      <!-- Thanh điều hướng hàng đầu -->
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img
+                src="./img/logo app.png"
+                alt="Your Logo"
+                width="100"
+                height="50"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Cho thuê nhà trọ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Cho thuê nhà nguyên căn
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Cho thuê căn hộ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Tìm người ở ghép</a
+                  >
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="trangchu.html"
+                    ><i class="fas fa-home"></i> Trang Chủ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    id="yeuthich"
+                    class="nav-link active"
+                    aria-current="page"
+                    href="yeuthich.html"
+                    ><span>&#10084;</span> Yêu Thích</a
+                  >
+                </li>
+                <li class="nav-item" id="checkUser">
+                  <a
+                    id="dangnhap "
+                    class="nav-link active"
+                    aria-current="page"
+                    href="dangnhap.html"
+                    ><span>&#128274;</span> Đăng Nhập</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <button
+                    id="dangtin"
+                    class="nav-link btn btn-primary"
+                    onclick="redirectToDangTinPage()"
+                  >
+                    <span>&#128269;</span> Đăng Tin
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container">
+        <h1 class="mt-5">Đăng Tin Phòng Trọ</h1>
+        <form id="post-form" class="mt-4">
+          <div class="form-group">
+            <label for="loaiPhong">Loại Phòng:</label>
+            <select class="form-control" id="loaiPhong">
+              <option value="Kí Túc Xá/Homestay">Kí Túc Xá/Homestay</option>
+              <option value="Phòng Cho Thuê">Phòng Cho Thuê</option>
+              <option value="Phòng Ở Ghép">Phòng Ở Ghép</option>
+              <option value="Nhà Nguyên Căn">Nhà Nguyên Căn</option>
+              <option value="Căn Hộ">Căn Hộ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input id="soLuongPhong" type="text" placeholder="soLuongPhong" />
+          </div>
+          <div class="form-group">
+            <label for="sucChua">Sức Chứa:</label>
+            <input type="number" class="form-control" id="sucChua" required />
+          </div>
+          <div class="form-group">
+            <label for="gioiTinh">Giới Tính Ưu Tiên:</label>
+            <select class="form-control" id="gioiTinh">
+              <option value="Tất Cả">Tất Cả</option>
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dienTich">Diện Tích (m²):</label>
+            <input type="number" class="form-control" id="dienTich" required />
+          </div>
+          <div class="form-group">
+            <label for="diaChi">Địa chỉ:</label>
+            <input
+              name="diaChi"
+              id="diaChi"
+              class="form-control"
+              placeholder="Nhập dia chi"
+            ></input>
+          </div>
+          <div class="form-group">
+            <label for="diaChi">Địa chỉ Iframe:</label>
+            <textarea
+              name="diaChiIframe"
+              id="diaChiIframe"
+              cols="30"
+              class="form-control"
+              rows="6"
+              placeholder="Nhập Iframe google"
+            ></textarea>
+          </div>
+          <!-- Chi phí -->
+          <h2 class="mt-4">Chi Phí</h2>
+          <div class="form-group">
+            <label for="giaChoThue">Giá Cho Thuê (VNĐ/tháng):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="giaChoThue"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="tienDien">Tiền Điện (VNĐ/tháng):</label>
+            <input type="number" class="form-control" id="tienDien" required />
+          </div>
+          <div class="form-group">
+            <label for="tienNuoc">Tiền Nước (VNĐ/tháng):</label>
+            <input type="number" class="form-control" id="tienNuoc" required />
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="choDeXe" />
+            <label class="form-check-label" for="choDeXe">Chỗ Để Xe</label>
+          </div>
+          <div class="form-group mt-4">
+            <label for="anh">Tải Ảnh Lên:</label>
+            <input type="file" class="form-control-file" id="anh" />
+          </div>
+          <div class="form-check">
+            <label for="tienIchList">Tiện Ích (chọn các tiện ích):</label><br />
+            <input type="checkbox" id="tienIchWC" /> WC riêng
+            <input type="checkbox" id="tienIchAnNinh" /> An Ninh
+            <input type="checkbox" id="tienIchWifi" /> Wifi
+            <input type="checkbox" id="tienIchGioGiac" /> Giờ Giấc Tự Do
+          </div>
+          <!-- Thông Tin Liên Hệ -->
+          <h2 class="mt-4">Thông Tin Liên Hệ</h2>
+          <div class="form-group">
+            <label for="soDienThoai">Số Điện Thoại:</label>
+            <input type="tel" class="form-control" id="soDienThoai" required />
+          </div>
+          <div class="form-group">
+            <label for="tieuDeBaiDang">Tiêu Đề Bài Đăng:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="tieuDeBaiDang"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="noiDungMoTa">Nội Dung Mô Tả:</label>
+            <textarea
+              class="form-control"
+              id="noiDungMoTa"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="gioMoCua">Giờ Mở Cửa:</label>
+            <input type="time" class="form-control" id="gioMoCua" />
+          </div>
+          <button id="submit">đăng tin</button>
+        </form>
+      </div>
+    </body>
+    <script type="module" src="dangtin.js"></script>
+  </body>
+</html>

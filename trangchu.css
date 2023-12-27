@@ -1,0 +1,54 @@
+/* CSS cho thẻ phòng */
+.room-card {
+  width: calc(25% - 20px); /* Điều chỉnh chiều rộng để tính toán khoảng trống */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+/* Flexbox cho danh sách phòng */
+#room-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Đảm bảo khoảng trống đều giữa các thẻ */
+}
+
+/* Chiều rộng và khoảng cách giữa thẻ phòng */
+#room-list li {
+  width: 100%;
+  max-width: calc(25% - 20px); /* Đặt chiều rộng tối đa cho tính thích ứng */
+  padding: 10px; /* Thêm khoảng cách giữa các thẻ */
+}
+
+/* CSS cho phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  background-color: #f0e9e9;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.pagination li {
+  list-style: none;
+  margin: 5px;
+}
+
+.pagination a {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  color: #333;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}

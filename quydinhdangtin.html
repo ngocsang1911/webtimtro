@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/your.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./trangchu.css">
+    <link rel="stylesheet" type="text/css" href="./quydinhdangtin.css">
+
+    
+</head>
+<body>
+    <!-- Thanh điều hướng hàng đầu -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">    
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="./img/logo app.png" alt="Your Logo" width="100" height="50"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Cho thuê nhà trọ</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Cho thuê nhà nguyên căn </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Cho thuê căn hộ</a>
+                      </li>    
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Tìm người ở ghép</a>
+                      </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="trangchu.html"><i class="fas fa-home"></i> Trang Chủ</a>
+                    </li>  
+                      <li class="nav-item">
+                        <a id="yeuthich" class="nav-link active" aria-current="page" href="yeuthich.html"><span>&#10084;</span> Yêu Thích</a>
+                    </li>
+                      <li class="nav-item">
+                        <a id="dangnhap" class="nav-link active" aria-current="page" href="dangnhap.html"><span>&#128274;</span> Đăng Nhập</a>
+                    </li>
+                      <li class="nav-item">
+                        <button id="dangtin" class="nav-link btn btn-primary" onclick="redirectToDangTinPage()"><span>&#128269;</span> Đăng Tin</button>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+          
+      </nav>
+  </header>
+  <header>
+    <h1>QUY ĐỊNH ĐĂNG TIN</h1>
+</header>
+
+<!-- Content -->
+<div class="content">
+    <h2>A. QUY ĐỊNH CHUNG:</h2>
+    <ul>
+        <li>Không sử dụng bất kỳ thiết bị, phần mềm, quy trình, phương tiện để can thiệp hay cố gắng can thiệp vào hoạt động đúng đắn trên Thuephongtro.com</li>
+        <li>Không được đăng ký tài khoản và khai báo những thông tin giả mạo; nick gây hiểu nhầm với những thành viên khác</li>
+        <li>Không được phép đăng tin liên quan đến các vấn đề mà Pháp luật Việt Nam không cho phép.</li>
+        <li>Không được đăng những bài viết, thông tin có nội dung vi phạm pháp luật; đả kích, bôi nhọ, chỉ trích hay bàn luận về chính trị, tôn giáo, phản động, kỳ thị văn hóa, dân tộc, cũng như vi phạm khác liên quan đến thuần phong mỹ tục của dân tộc Việt Nam.</li>
+        <li>Không được xâm phạm quyền lợi, uy tín, đời tư của các cá nhân hay thành viên khác, không được dùng ngôn từ tục tĩu, thóa mạ trong các thông tin tham gia.</li>
+        <li>Không được lợi dụng website để tuyên truyền, đề xướng, lôi kéo với những nội dung không lành mạnh.</li>
+        <li>Phải dùng ngôn từ trong sáng, rõ ràng, đúng chính tả.</li>
+    </ul>
+
+    <h2>B. QUY ĐỊNH VỀ TIN ĐĂNG:</h2>
+    <ul>
+        <li>QUY ĐỊNH VỀ THỜI GIAN HIỂN THỊ TIN ĐĂNG:</li>
+        <ul>
+            <li>Thời gian hiển thị tin thường = số ngày tin thường đã chọn. (Tối thiểu 5 ngày tin đăng)</li>
+            <li>Thời gian hiển thị tin VIP = số ngày đăng tin VIP đã chọn. (Tối thiểu 3 ngày tin đăng)</li>
+            <li>Các tin không được duyệt sau 1 tháng nếu không chỉnh sửa lại nội dung sẽ tự động bị xóa.</li>
+            <li>Các tin đăng hết hạn sẽ được lưu trữ và đóng dấu tin hết hạn.</li>
+        </ul>
+        <li>NHỮNG LÝ DO KHIẾN LÝ TIN KHÔNG ĐƯỢC DUYỆT HOẶC BỊ XÓA</li>
+        <ul>
+            <li>Nội dung vi phạm 1 trong các quy định chung.</li>
+            <li>Nội dung Tiếng Việt không có dấu.</li>
+            <li>Nội dung chứa từ khóa, thông tin vi phạm pháp luật.</li>
+            <li>Nội dung chứa đường dẫn đến website khác.</li>
+            <li>Nội dung trùng với tin đăng khác.</li>
+            <li>Đăng sai loại bất động sản.</li>
+            <li>Mức giá không đúng với thực tế bán (cho thuê)</li>
+            <li>Hình ảnh không đúng với nội dung (Phải đăng ảnh thật của tài sản hoặc không sử dụng ảnh)</li>
+            <li>Chọn sai dự án</li>
+            <li>Thông tin liên hệ không hợp lệ (bao gồm tên người được liên hệ, số điện thoại, địa chỉ)</li>
+        </ul>
+    </ul>
+
+    <h2>C. QUY ĐỊNH VỀ TÀI KHOẢN:</h2>
+    <ul>
+        <li>Tại Thuephongtro.com, chúng tôi rất quan tâm đến vấn đề minh bạch thông tin, vì vậy tài khoản phải cung cấp thông tin thật của người sử dụng (họ tên, số điện thoại...).</li>
+        <li>Số điện thoại sử dụng của tài khoản sẽ được xác thực trước khi đăng tin.</li>
+        <li>Tài khoản sẽ được đánh dấu "đã xác thực" sau khi ban quản trị website nhận được thông tin cung cấp từ chủ tài khoản (bao gồm chứng minh nhân dân, bằng lái hoặc các thông tin liên quan).</li>
+    </ul>
+
+    <h2>D. QUY ĐỊNH VỀ CHI PHÍ:</h2>
+    <ul>
+        <li>Mỗi tài khoản đăng ký lần đầu tiên được tặng 10.000 đồng vào tài khoản (đủ để đăng 1 tin thường), bạn sẽ trả phí nếu muốn sử dụng tiếp dịch vụ đăng tin thường, VIP, UP TOP, hoặc các dịch vụ có phí khác.</li>
+        <li>Giúp giao mua bán (cho thuê) diễn ra nhanh chóng cũng là 1 trong những mục tiêu của Thuephongtro.com, vì vậy phí trả cho số ngày mua dịch vụ sẽ không được hoàn lại khi giao dịch đã thành công sớm hơn.</li>
+        <!-- Thêm bảng giá và quy định đăng tin liên quan đến chi phí -->
+    </ul>
+</div>
+
+
+
+<body>
+</html>

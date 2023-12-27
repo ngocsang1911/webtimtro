@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dangnhap.css" />
+    <title>Đăng nhập</title>
+
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <span class="iconclose">
+        <ion-icon name="close-outline"></ion-icon>
+      </span>
+      <div class="form-box Login">
+        <h2>Đăng Nhập</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </span>
+            <input type="password" required />
+            <label>Mật khẩu</label>
+          </div>
+          <div class="remmber-forgot">
+            <label><input type="checkbox" /> Ghi nhớ đăng nhập</label>
+            <a href="#">Quên mật khẩu</a>
+          </div>
+          <span id="error-message" style="color: red; opacity: 0">
+            Sai tài khoản hoặc mật khẩu
+          </span>
+          <button type="submit" class="btn" id="btndangnhap">Đăng nhập</button>
+
+          <div class="login-register">
+            <p>
+              Bạn không có tài khoản?
+              <a href="dangki.html" class="register-link">Đăng kí</a>
+            </p>
+            <p><a href="trangchu.html">Quay về trang chủ</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="xulidangnhap.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

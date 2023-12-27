@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dangki.css" />
+    <title>Đăng kí</title>
+
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapperdk">
+      <div class="form-box register">
+        <h2>Đăng kí</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <input type="text" required />
+            <label>Tên người dùng</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </span>
+            <input type="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </span>
+            <input type="password" required />
+            <label>Mật khẩu</label>
+          </div>
+          <div class="remmber-forgot">
+            <label
+              ><input type="checkbox" /> Tôi đồng ý với điều khoản trên</label
+            >
+          </div>
+          <button type="submit" class="btn" id="btndangki">Đăng kí</button>
+          <div class="login-register">
+            <p>
+              Đi đến đăng nhập
+              <a href="dangnhap.html" class="login-link">Đăng nhập</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+     
+  </script> -->
+
+    <script type="module" src="xulydangky.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

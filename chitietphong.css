@@ -1,0 +1,99 @@
+
+
+.room-detail{
+    padding: 1% 5%;
+}
+
+.price{
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.info_price{
+    display: flex;
+    justify-content: space-between
+}
+
+.container_product{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2%;
+}
+
+.image_detail{
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    grid-column: span 7; 
+}
+
+.profile{
+    grid-column: span 3;
+   
+}
+.profile_model{
+    overflow: hidden;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: max-content;
+}
+.profile_avt{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.profile_button{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+
+}
+.modalBookRoom{
+    position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+}
+.modalBookRoom_child{
+    width: 50%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+}
+
+.modalBookRoom_show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalBookRoom_child_input{
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    /* margin: 10px 0px; */
+    outline: none;
+}
+
+.btn_submit_bookroom{
+    padding: 4px 26px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 10px;
+    background: #0289f0;
+}

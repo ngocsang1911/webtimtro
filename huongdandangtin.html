@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="path/to/your.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./trangchu.css">
+    <link rel="stylesheet" type="text/css" href="./huongdandangtin.css">
+    <link rel="stylesheet" type="text/css" href="./gioithieu.css">
+
+
+
+</head>
+<body>
+    <!-- Header -->
+    <!-- Thanh điều hướng hàng đầu -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">    
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./img/logo app.png" alt="Your Logo" width="100" height="50"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cho thuê nhà trọ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cho thuê nhà nguyên căn </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cho thuê căn hộ</a>
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Tìm người ở ghép</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="trangchu.html"><i class="fas fa-home"></i> Trang Chủ</a>
+                      </li>  
+                        <li class="nav-item">
+                          <a id="yeuthich" class="nav-link active" aria-current="page" href="yeuthich.html"><span>&#10084;</span> Yêu Thích</a>
+                      </li>
+                        <li class="nav-item">
+                          <a id="dangnhap" class="nav-link active" aria-current="page" href="dangnhap.html"><span>&#128274;</span> Đăng Nhập</a>
+                      </li>
+                        <li class="nav-item">
+                          <button id="dangtin" class="nav-link btn btn-primary" onclick="redirectToDangTinPage()"><span>&#128269;</span> Đăng Tin</button>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+        <p>🌐 <strong>vnhome.com</strong> là kênh thông tin về phòng trọ, nhà trọ hàng đầu tại Việt Nam. Website được thành lập vào tháng 09/2011 - là website đầu tiên hỗ trợ riêng biệt cho người muốn đăng tin cho thuê phòng trọ cũng như người tìm phòng trọ một cách nhanh nhất và chính xác nhất.</p>
+        <p>💹 Hiện nay vnhome.com tự hào có lượng dữ liệu bài đăng lớn nhất trong lĩnh vực cho thuê phòng trọ với hơn 100.000 tin trên hệ thống, hơn 90.000 thành viên với hơn 3 triệu lượt xem hàng tháng và có xu hướng tăng nhanh hơn nữa.</p>
+        
+        <h2>1️⃣ Hướng dẫn đăng tin</h2>
+        <p>♦  Nếu bạn chưa có tài khoản, hãy đăng ký tại đây trước khi bắt đầu đăng tin cho thuê.</p>
+        <p>♦  Nếu bạn đã có tài khoản, sau khi đăng nhập vào website, bạn bấm vào nút ĐĂNG TIN để bắt đầu.        </p>
+        <P>♦  Khi đăng tin các bạn đọc kỹ mô tả từng bước, nhập đầy đủ và chính xác nội dung cho tin đăng, đặc biệt là mục Giá và Diện tích. Những tin có nội dung hình ảnh rõ ràng, đầy đủ sẽ có tỉ lệ xem cao hơn 50%.</P>
+        <P>📣 Lưu ý khi đăng tin:</P>
+        <p>▪️ Điền đầy đủ các thông tin bắt buộc vào các ô nhập liệu trong phần đăng tin.        </p>
+        <P>▪️ Phần giá cho thuê, vui lòng nhập chính xác giá cho thuê. Ví dụ bạn cho thuê 1 triệu/tháng thì bạn nhập đủ như sau 1000000 (1 số 1 và 6 số 0)        </P>
+        <P>▪️ Nhập chính xác diện tích phòng trọ, nhà, hay căn hộ cho thuê.        </P>
+        <P>▪️ Sau khi nhập đầy đủ các thông tin, bấm ĐĂNG TIN dưới cùng và chờ vài giây để tin bạn hiển thị trên website, nếu đăng tin thành công hệ thống sẽ báo bạn đã đăng tin thành công, nếu hệ thống cảnh báo màu đỏ, các ô chọn màu bị sai, vui lòng nhập lại cho chính xác và bấm ĐĂNG TIN  lại.</P>
+        <!-- ...Thêm nội dung hướng dẫn đăng tin... -->
+
+        <h2>2️⃣ Hướng dẫn quản lý tin đăng</h2>
+        <p>Sau khi đăng nhập tài khoản, bấm vào phần Quản lý tài khoản -> Quản lý tin đăng để truy cập vào mục quản lý, gồm các chức năng sau:</p>
+        <p>🔸 Up lên TOP: tức là làm mới tin, đưa tin lên đầu ở từng chuyên mục. Chẳng hạn bạn bấm "Up lên TOP" cho tin thường sẽ đưa tin đó lên đầu danh sách tin thường, còn với tin VIP thì tin đó sẽ lên đầu danh sách tin VIP.</p>
+        <P>🔸 Nâng cấp VIP: là chức năng giúp thay đổi vị trí hiện thị của tin đăng lên vị trí cao hơn tiếp cận được nhiều người xem hơn (Có 3 loại tin VIP: VIP1, VIP2 và Tin HOT).</P>
+        <p>🔸 Sửa tin: có nghĩa là bạn có thể sửa lại toàn bộ nội dung tin đăng của bạn.        </p>
+        <P>🔸 Gia hạn: khi tin đăng hết hạn thì bạn không cần đăng tin mới, bạn chỉ cần bấm vào đây để đăng lại tin một cách nhanh chóng.        </P>
+        <P> 🔸 Ẩn tin: Bấm vào đây để báo là ĐÃ CHO THUÊ, ngoài ra với TIN HẾT HẠN thì khi bấm vào đây các số điện thoại của bạn trên tin đăng sẽ ẩn đi tránh bị làm phiền.        </P>
+        <P>Đối với ngày hết hạn sẽ chia ra thế này: Ngày hết hạn của Tin VIP và ngày hết hạn của tin thường. Ví dụ tin của bạn hết hạn TIN VIP nhưng vẫn còn hạn tin thường thì sau khi hết hạn tin đó sẽ chuyển sang là tin thường. Đây là một tính năng rất hay chỉ có duy nhất tại Thuephongtro.com.</P>
+        <!-- ...Thêm nội dung hướng dẫn quản lý tin đăng... -->
+
+        <h3>Mọi thắc mắc xin liên hệ:</h3>
+        <p>☎ Hotline: 09678.333.78</p>
+        <p>✉ Email: nhatroviet@gmail.com</p>
+    </div>
+    
+</div>
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <h3>Về chúng tôi</h3>
+              <p>Website cho thuê phòng trọ, nhà trọ nhanh chóng và hiệu quả</p>
+              <p> ĐIỆN BIÊN PHỦ, QUẬN THANH KHÊ, TP.ĐÀ NẴNG</p>
+              <p>0967833378</p>
+              <p>vnhome@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+              <h3>Hỗ trợ</h3>
+              <ul>
+                  <li><a href="gioithieu.html">Gioi Thiệu</a></li>
+                  <li><a href="huongdandangtin.html">Hướng dẫn đăng tin</a></li>
+                  <li><a href="#">Quy định đăng tin</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h3>Liên Hệ</h3>
+              <ul>
+                  <li><a href="#">Phương thức liên hệ</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

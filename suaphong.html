@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Phòng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./trangchu.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="./img/logo app.png" alt="Your Logo" width="100" height="50"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cho thuê nhà trọ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class "nav-link active" aria-current="page" href="#">Cho thuê nhà nguyên căn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cho thuê căn hộ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Tìm người ở ghép</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="trangchu.html"><i class="fas fa-home"></i> Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="yeuthich" class="nav-link active" aria-current="page" href="yeuthich.html"><span>&#10084;</span> Yêu Thích</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="dangnhap" class="nav-link active" aria-current="page" href="dangnhap.html"><span>&#128274;</span> Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="dangtin" class="nav-link btn btn-primary" onclick="redirectToDangTinPage()"><span>&#128269;</span> Đăng Tin</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h1>Sửa thông tin phòng</h1>
+        <form>
+            <div class="form-group">
+                <label for="loaiPhong">Loại Phòng:</label>
+                <input type="text" id="loaiPhong" name="loaiPhong" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="soLuongPhong">Số Lượng Phòng:</label>
+                <input type="number" id="soLuongPhong" name="soLuongPhong" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="sucChua">Sức Chứa:</label>
+                <input type="number" id="sucChua" name="sucChua" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="gioiTinh">Giới Tính Ưu Tiên:</label>
+                <input type="text" id="gioiTinh" name="gioiTinh" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="dienTich">Diện Tích (m²):</label>
+                <input type="number" id="dienTich" name="dienTich" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="giaChoThue">Giá Cho Thuê (VNĐ/tháng):</label>
+                <input type="number" id="giaChoThue" name="giaChoThue" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-editphong">Lưu</button>
+        </form>
+    </div>
+
+    <footer>
+        <!-- Thêm nội dung chân trang tại đây -->
+    </footer>
+    <script type="module" src="suaphong.js"></script>
+   
